@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Formulario</h1>
-    <h3>Los campos marcados con <span style="color: red !important; display: inline; float: none;">*</span> son obligatorios </h3>
     <hr>
+    <h3>Los campos marcados con <span style="color: red !important; display: inline; float: none;">*</span> son obligatorios </h3>
     <form name="formulario" method="post" action="/send.php">
         <label for="Usuario"> Nombre:</label><span style="color: red !important; display: inline; float: none;">*</span>
         <input type="text" placeholder="Nombre" name="nombre" value="" />
@@ -290,7 +290,10 @@
        <input type="radio" id="javascript" name="Genero" value="3">
        <label for="Otro">Otro</label><br><br>
 
-       <Textarea placeholder="Habla un poco sobre ti..." >
+        <label for="Foto">Seleccione una foto suya</label> <span style="color: red !important; display: inline; float: none;">*</span>
+        <input type="file" placeholder="DNI" name="DNI" value="" /> <br><br>
+
+       <Textarea id="Formulario"  placeholder="Habla un poco sobre ti..." rows="5" cols="50" >
 
        </Textarea>
 
