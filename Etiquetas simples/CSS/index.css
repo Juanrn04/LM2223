@@ -1,0 +1,10 @@
+#deslizar{
+    position: fixed;
+    top: 10px;
+    }
+#caja1{
+
+    position: relative;
+    top: 80px ;
+    z-index: -1 ;
+}
