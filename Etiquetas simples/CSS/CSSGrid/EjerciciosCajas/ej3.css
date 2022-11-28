@@ -13,7 +13,7 @@ body{
 .contenedor{
     
     border: 2px black dashed;
-    grid-template-areas: 'c1' 'c2' 'c3' 'c4' 'c5' ;
+    grid-template-areas: 'c1 c1' 'c2 c2' 'c3 c4' 'c5 c5' ;
     grid-template-rows: 10% 20% auto auto ;
     grid-template-columns: 50% 50% ;
     display: grid;
