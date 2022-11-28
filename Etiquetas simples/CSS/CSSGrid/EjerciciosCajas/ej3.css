@@ -14,7 +14,7 @@ body{
     
     border: 2px black dashed;
     grid-template-areas: 'c1' 'c2' 'c3' 'c4' 'c5' ;
-    grid-template-rows: 10% 20% auto 10% ;
+    grid-template-rows: 10% 20% auto auto ;
     grid-template-columns: 50% 50% ;
     display: grid;
     width: 80% ;
@@ -50,4 +50,5 @@ body{
     grid-area: c5;
     background-color: grey ;
     grid-column: 1/span 2 ;
+
 }
