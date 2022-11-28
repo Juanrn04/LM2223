@@ -28,6 +28,7 @@ border: 1px solid black;
 }
 .c1{
     background-color: lightblue;
+    grid-column: 1/ span 2 ;
 }
 .c2 {
     background-color: lightcoral;
@@ -46,6 +47,7 @@ border: 1px solid black;
 }
 .c7 {
     background-color: lightseagreen;
+    grid-column: 2/ span 2;
 }
 .c8 {
     background-color: red;
@@ -61,5 +63,6 @@ border: 1px solid black;
 }
 .c12 {
     background-color: tomato;
+    grid-column:2/ span 2 ;
 }
 
