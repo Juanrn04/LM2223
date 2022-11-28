@@ -11,25 +11,24 @@ body{
 
 }
 .contenedor{
-    
-    border: 2px black dashed;
-    grid-template-areas: 'c1 c1' 'c2 c2' 'c3 c4' 'c5 c5' ;
-    grid-template-rows: 10% 20% auto auto ;
-    grid-template-columns: 50% 50% ;
     display: grid;
+    margin: 0 auto;
     width: 80% ;
     height:84vh ;
-    justify-content: stretch ;
     padding: 20px ;
+    border: 2px black dashed;
     background-color: lightgray;
-    margin: 0 auto;
+    grid-template-areas: 'c1 c1' 'c2 c2' 'c3 c4' 'c5 c5' ;
+    grid-template-rows: 15% 20% auto 10% ;
+    grid-template-columns: 50% 50% ;
 }
 
 .c1{
     grid-area: c1 ;
     background-color: lightblue;
-    line-height:70px ;
+    line-height:80px ;
     grid-column: 1/span 2 ;
+    height: auto;
 
 }
 .c2{
@@ -41,14 +40,17 @@ body{
 .c3{
     grid-area: c3;
     background-color: salmon ;
+    line-height: 300px ;
 }
 .c4{
     grid-area: c4;
     background-color: lightseagreen ;
+    line-height:300px; ;
 }
 .c5{
     grid-area: c5;
-    background-color: grey ;
+    background-color: lightgrey ;
     grid-column: 1/span 2 ;
+    line-height: 50px ;
 
 }
