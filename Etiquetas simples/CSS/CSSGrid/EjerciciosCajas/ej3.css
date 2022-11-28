@@ -3,3 +3,51 @@ body{
     font-family: Arial, Helvetica, sans-serif ;
     text-align: center;
 }
+.caja {
+    border: 4px black solid ;
+    background-color: lightgray;
+    text-align: center;
+    
+
+}
+.contenedor{
+    
+    border: 2px black dashed;
+    grid-template-areas: 'c1' 'c2' 'c3' 'c4' 'c5' ;
+    grid-template-rows: 10% 20% auto 10% ;
+    grid-template-columns: 50% 50% ;
+    display: grid;
+    width: 80% ;
+    height:84vh ;
+    justify-content: stretch ;
+    padding: 20px ;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+.c1{
+    grid-area: c1 ;
+    background-color: lightblue;
+    line-height:70px ;
+    grid-column: 1/span 2 ;
+
+}
+.c2{
+    grid-area: c2;
+    background-color:lightyellow ;
+    line-height: 120px ;
+    grid-column: 1/ span 2;
+}
+.c3{
+    grid-area: c3;
+    background-color: salmon ;
+}
+.c4{
+    grid-area: c4;
+    background-color: lightseagreen ;
+}
+.c5{
+    grid-area: c5;
+    background-color: grey ;
+    grid-column: 1/span 2 ;
+}
