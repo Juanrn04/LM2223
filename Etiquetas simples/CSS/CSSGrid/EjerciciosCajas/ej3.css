@@ -26,7 +26,7 @@ body{
 .c1{
     grid-area: c1 ;
     background-color: lightblue;
-    line-height:80px ;
+    line-height:100px ;
     grid-column: 1/span 2 ;
     height: auto;
 
@@ -34,23 +34,23 @@ body{
 .c2{
     grid-area: c2;
     background-color:lightyellow ;
-    line-height: 120px ;
+    line-height: 150px ;
     grid-column: 1/ span 2;
 }
 .c3{
     grid-area: c3;
     background-color: salmon ;
-    line-height: 300px ;
+    line-height: 400px ;
 }
 .c4{
     grid-area: c4;
     background-color: lightseagreen ;
-    line-height:300px; ;
+    line-height:400px; ;
 }
 .c5{
     grid-area: c5;
     background-color: lightgrey ;
     grid-column: 1/span 2 ;
-    line-height: 50px ;
+    line-height: 70px ;
 
 }
