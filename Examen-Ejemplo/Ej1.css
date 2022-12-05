@@ -1,0 +1,66 @@
+body{
+    background-image: url(Imagenes/FONDO.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.header{
+    background: #b28306;
+    padding: 1px;
+    text-align: center;
+    color:#4c3803;
+    font-size: 17px;
+    border-radius: 20px;
+    border-bottom:1px;
+    border-color: black;
+}
+
+.navbar {
+    display: flex;
+    background-color: #4c3803;
+    justify-content:center ;
+    border-radius: 15px;
+  }
+  
+  .navbar a {
+    color: #b28306;
+    padding: 20px;
+    text-decoration: none;
+    text-align: justify;
+
+  }
+  
+  .navbar a:hover {
+    background-color:#4c3803;
+    color: white;
+  }
+
+  .caja{
+    background:#b28306 ;
+    padding: 5px;
+    border-radius: 10px ;
+    height: 100%;
+    
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+  }
+  .column {
+    flex: 70%;
+    max-width: 70%;
+    padding:4px;
+  }
+  .column2 {
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px;
+  }
+  .column3 {
+    flex: 100%;
+    max-width: 100%;
+
+  }
