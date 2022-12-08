@@ -1,66 +1,85 @@
-body{
-    background-image: url(Imagenes/FONDO.jpg) ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+html {
+  background-color: lightgrey;
+  font-family: trebuchet, geneva, sans-serif;
+  background: url(Imagenes/FONDO.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.header{
-    background: #b28306;
-    padding: 1px;
-    text-align: center;
-    color:#4c3803;
-    font-size: 17px;
-    border-radius: 20px;
-    border-bottom:1px;
-    border-color: black;
+body {
+  margin: 0;
+  
+}
+p::first-letter {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4C3803;
+}
+article, aside, footer, header {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+header {
+  background-color: #B28306;
+  color: #4C3803;
+  text-align: center;
+  border-bottom: 1px solid;
+  border-radius: 20px;
+}
+aside {
+  background-color: #B28306;
+  border-radius: 20px;
 }
 
-.navbar {
-    display: flex;
-    background-color: #4c3803;
-    justify-content:center ;
-    border-radius: 15px;
-  }
-  
-  .navbar a {
-    color: #b28306;
-    padding: 20px;
+/* default navigation values */
+nav {
+  display: flex;
+  background-color: #EBCD7C;
+  padding: 10px 0;
+  border-radius: 20px;
+}
+nav a {
+  flex: auto;
+  text-align: center;
+  background: #4C3803;
+  color: #B28306;
+  margin: 0 5px;
+  padding: 5px 0;
+  text-decoration: none;
+  border-radius: 20px;
+}
+nav a:hover {
+  outline: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+a {
+    color: gray;
+    font-weight: bold;
     text-decoration: none;
-    text-align: justify;
-
+}
+/* larger screen */
+@media screen and (min-width: 30rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+    max-width: 75rem;
+    margin: auto;
   }
-  
-  .navbar a:hover {
-    background-color:#4c3803;
-    color: white;
-  }
-
-  .caja{
-    background:#b28306 ;
-    padding: 5px;
-    border-radius: 10px ;
-    height: 100%;
-    
-  }
-  .row {
+  main {
     display: flex;
     flex-wrap: wrap;
-    padding: 4px;
+    box-sizing: border-box;
+    border-bottom: 0.5rem solid;
   }
-  .column {
-    flex: 70%;
-    max-width: 70%;
-    padding:4px;
+  nav, header {
+    order: -1;
   }
-  .column2 {
+  article {
+    flex: 75%;
+  }
+  aside {
     flex: 25%;
-    max-width: 25%;
-    padding: 4px;
   }
-  .column3 {
-    flex: 100%;
-    max-width: 100%;
-
-  }
+}
