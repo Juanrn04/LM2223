@@ -1,0 +1,45 @@
+body{
+    background: url(Imagenes/FONDO.jpg) no-repeat center center fixed;
+    background-size: cover;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin: 0;
+}
+.cabezero{
+    background-color: #B28306;
+    color: #4C3803;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.lateral{
+    background-color: #B28306;
+  border-radius: 20px;
+}
+nav {
+    display: flex;
+    background-color: #EBCD7C;
+    padding: 10px 0;
+    border-radius: 20px;
+  }
+  nav a {
+    flex: auto;
+    text-align: center;
+    background: #4C3803;
+    color: #B28306;
+    margin: 0 5px;
+    padding: 5px 0;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  nav a:hover {
+    outline: 1px solid white;
+    color: white;
+    text-decoration: none;
+  }
+  a {
+      color: gray;
+      font-weight: bold;
+      text-decoration: none;
+  }
