@@ -1,0 +1,36 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(52, 49, 49) ;
+    padding: 1rem ;
+}
+.contenedor{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em ;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+@media  (min-width: 700px) {
+    .contendor {
+      padding:0px;
+    }
+}
+
+@media  (max-width: 700px) {
+    .contendor {
+      padding:2em;
+    }
+}
+
+.caja{
+   
+    background-color: white;
+ 
+}
+.informacion{
+    justify-content:left ;
+    background-color: rgb(11, 76, 26) ;
+    
+}
