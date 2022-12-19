@@ -34,18 +34,13 @@ body{
     text-align: center;
     background-color:transparent;
 }
-.c1{
-    
 
-}
 .c2{
     background-color: white;
     
     flex-direction: column;
 }
-.c3{
 
-}
 @media  (min-width: 768px) {
     .column {
       flex: 25%;
