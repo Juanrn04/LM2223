@@ -1,0 +1,28 @@
+#circulo1{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    background: red;
+}
+#circulo2{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    background: green;
+}
+#circulo3{
+    width: 100px;
+    height: 100px;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    background: yellow;
+}
+.cajon{
+    display: flex;
+    flex-direction: row;
+}
