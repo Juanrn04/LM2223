@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Formulario_carrito.css">
+</head>
+<body>
+    
+    <h1>Finaliza  su compra</h1> 
+    <div class="caja">
+    <label>Nombre: <input required type="text" id="nombre" placeholder="Nombre"><label> <label id="valnombre" style="color: red;"></label> <br><br>
+    <label>Apellidos: <input required type="text" id="apellidos" placeholder="Apellidos"><label> <label id="valapellidos" style="color: red;" ></label> <br><br>
+    <label>DNI: <input required type="text" id="dni" placeholder="DNI"></label> <label id="valdni" style="color: red;"></label> <br><br>
+    <label>Correo electronico: <input required type="email" id="correo" placeholder="Correo"><label> <label id="valcorreo" style="color: red;"></label> <br><br>
+    <label>Número de telefono: <input type="number" id="telefono" placeholder="Telefono(Opcional)"><label> <br><br>
+    <label>Número de tarjeta: <input required type="number" id="numtarjeta" placeholder="Número de tarjeta"><label> <label id="valnumtarjeta" style="color: red;"></label> <br><br>
+    <label>Fecha de validez: <input required type="text" id="fechatarjeta" placeholder="MM/AA"><label> <label id="valfechatarjeta" style="color: red;"></label> <br><br>
+    <label>Código de verificación: <input required type="number" id="codtarjeta" placeholder="CVV"><label> <label id="valcodtarjeta" style="color: red;"></label> <br><br>
+    <input required type="checkbox" id="caja"> <label>Acepto las condiciones de la compra</label> <label id="valcaja" style="color: red;" ></label> <br><br>
+    <button onclick="validacion()">Finalizar compra</button>
+    </div>
+
+</body>
+<script src="Formulario_carrito.js" ></script>
+</html>

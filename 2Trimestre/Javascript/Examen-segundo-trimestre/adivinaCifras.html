@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Adivina la cifra</title>
+</head>
+<body>
+    <h1>Juego de números aleatorios</h1>
+    <p>Intente adivinar el numero de 3 cifras</p>
+    <input type="number" id="numero">
+    <button onclick="adivinar()">Adivinar</button>
+    <p id="prueba" ></p>
+    <script>
+
+    var numerorandom = Math.floor(Math.random() * 999) + 1;
+
+function adivinar() {
+  var numero = parseInt(document.getElementById('numero').value);
+  if (numero == numerorandom) {
+    alert('¡Correcto!');
+    var puntuacion = parseInt(document.getElementById('puntuacion').textContent) + 1;
+    document.getElementById('score').textContent = score;
+    } 
+    else 
+    {
+    alert('Incorrecto, sigue intentandolo');
+    document.getElementById('puntuacion').textContent = 0;
+  }
+  document.getElementById('numero').value = '';
+}
+
+    </script>
+</body>
+</html>

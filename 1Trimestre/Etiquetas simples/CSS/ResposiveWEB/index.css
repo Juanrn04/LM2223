@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: black;
+    background-image:url(Sports.png);
+    background: top ;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    background-color: #333;
+    justify-content:center ;
+
+  }
+  
+  
+  .navbar a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  
+  .navbar a:hover {
+    background-color: skyblue;
+    color: black;
+  }
+  
+
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+
+  .side {
+    flex: 30%;
+    background-color: black;
+    padding: 20px;
+    color: white;
+  }
+  
+ 
+  .main {
+    flex: 30%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1abc9c;  
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+  }

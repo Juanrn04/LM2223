@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par_Impar</title>
+</head>
+<body>
+    <h1>Codigo de par e impar</h1>
+    <form action="">
+    <input type="text" id="numero" placeholder="Numero">
+    </form>
+    <p id="resultado"></p>
+    <button onclick="calculo()">¿Es par?</button>
+    <script>
+        function calculo()
+        {
+        let entrada = document.getElementById("numero").value;
+        if (parseInt(entrada)%2 == 0)
+            {
+        document.getElementById("resultado").innerHTML = "Es par";
+            }
+        else 
+            {
+        document.getElementById("resultado").innerHTML= "Es impar";
+            }
+        }
+    </script>
+
+
+    
+</body>
+</html>

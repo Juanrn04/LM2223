@@ -1,0 +1,88 @@
+#Banner{
+    position: sticky ;
+    top: 10px;
+    z-index: 10 ;
+}
+#caja1{
+    width: 460px;
+    height: 460px;
+    background-color: #0077ff;
+    color: black;
+    border:  solid;
+    padding: 0px ;
+    position: absolute;
+    z-index: -1 ;
+    padding: 20px ;
+}
+#caja2{
+    width: 460px;
+    height: 460px;
+    background-color: #0077ff;
+    border:black ;
+    border-style: solid ;
+    padding: 0px ;
+    margin-top:px ;
+    position: relative;
+    margin-left: 510px ;
+    padding: 20px;
+    z-index: 0 ;
+
+}
+#caja3{
+    width: 280;
+    height: 471px;
+    background-color: #0077ff;
+    color: black;
+    border:  solid black ;
+    padding: 0px ;
+    margin-top: -506px ;
+    position: relative;
+    margin-left: 1020px ;
+    padding: 20px ;
+    z-index: 2 ;
+    border-bottom: 0ch;
+   
+}
+#caja4{
+    width: 1218px;
+    height: 260px;
+    background-color: #0077ff;
+    color: black;
+    border:  solid black ;
+    padding: 0px ;
+    margin-top:-4px ;
+    position: relative;
+    padding: 20px ;
+    z-index: 1 ;
+    
+
+}
+
+
+#caja5{
+    width: 280px;
+    height: 460px;
+    background-color: #0077ff;
+    color: black;
+    border:  solid black ;
+    padding: 0px ;
+    margin-top:5px;
+    position: relative;
+    padding: 20px ;
+    z-index: -1 ;
+   
+}
+#caja6{
+    width: 888px;
+    height: 460px;
+    background-color: #0077ff;
+    border:black ;
+    border-style: solid ;
+    padding: 0px ;
+    margin-top: -506px ;
+    position: relative;
+    margin-left: 330px ;
+    padding: 20px;
+    z-index: 0 ;
+   
+}

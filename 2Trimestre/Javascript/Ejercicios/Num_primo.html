@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero primo</title>
+</head>
+<body>
+    <h1>Numeros primos</h1>
+    <form action="">
+    <input type="text" id="numero" placeholder="Numero">
+    </form>
+    <p id="resultado"></p>
+    <button onclick="calculo()">¿Es primo?</button>
+    <script>
+        function calculo(){
+            let entrada =parseInt(document.getElementById("numero").value);
+            i=2;
+            primo=true;
+            while(i<entrada)
+             {
+                if(entrada%i==0)
+                {
+                    primo=false
+                } i++;
+            }
+                if (primo==true)
+                {
+                    document.getElementById("resultado").innerHTML = "Es primo";
+                }
+                else
+                {
+                    document.getElementById("resultado").innerHTML = "No es primo";
+                }
+            }
+        
+
+          
+
+        
+    </script>
+</body>
+</html>

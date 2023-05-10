@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeración</title>
+</head>
+<body>
+    <h1>Escribe un numero</h1>
+    <input type="text" name="" id="numero" >
+    <button onclick="imprimeNumeros()"> Escribe </button>
+    <p id="demo" ></p>
+    <script>
+        function imprimeNumeros(){
+            let numero = document.getElementById("numero").value;
+            let cadena = "";
+            for (var i=1;i<=numero;i++){
+            document.getElementById("demo").innerHTML = document.getElementById("demo").innerHTML + i + "<br>";
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

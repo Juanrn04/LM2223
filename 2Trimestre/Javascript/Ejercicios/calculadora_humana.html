@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora_Humana</title>
+    <style>
+        div#caja
+        {
+            border:#000 1px solid;
+            padding:10px 40px 40px 40px;
+        
+        }
+        </style>
+    
+</head>
+<body>
+<h1>Calculadora humana</h1>
+<h2 id="resultado"></h2>
+<div id="prueba"></div>
+<script >
+        var pos = 0,
+            test, examen, pregunta, opcion, opciones, chA, chB, chC, correctas = 0;
+    var preguntas = [
+        ["¿Cuánto es 10 + 4?", "12", "14", "16", "B"],
+        ["¿Cuánto es 20 - 9?", "7", "13", "11", "C"],
+        ["¿Cuánto es 7 x 3?", "21", "24", "25", "A"],
+        ["¿Cuánto es 8 / 2?", "10", "2", "4", "C"]
+    ];
+    
+    function hacerPregunta() {
+        test = document.getElementById("prueba");
+        if (pos >= preguntas.length) {
+            test.innerHTML = "<h2>Conseguiste acertar " + correctas + " de " + preguntas.length + " preguntas</h2>";
+            document.getElementById("resultado").innerHTML = "Prueba completada";
+            pos = 0;
+            correctas = 0;
+            return false
+        }
+        document.getElementById("prueba").innerHTML = "Pregunta " + (pos + 1) + " de " + preguntas.length;
+        pregunta = preguntas[pos][0];
+        chA = preguntas[pos][1];
+        chB = preguntas[pos][2];
+        chC = preguntas[pos][3];
+        test.innerHTML = "<h3>" + pregunta + "</h3>";
+        test.innerHTML += "<input type='radio' name='opciones' value='A'> " + chA + "<br>";
+        test.innerHTML += "<input type='radio' name='opciones' value='B'> " + chB + "<br>";
+        test.innerHTML += "<input type='radio' name='opciones' value='C'> " + chC + "<br><br>";
+        test.innerHTML += "<button onclick='comprobarRespuesta()'>Enviar Respuesta</button>"
+    }
+    
+    function comprobarRespuesta() {
+        opciones = document.getElementsByName("opciones");
+        for (var i = 0; i < opciones.length; i++) {
+            if (opciones[i].checked) {
+                opcion = opciones[i].value
+            }
+        }
+        if (opcion == preguntas[pos][4]) {
+            correctas++
+        }
+        pos++;
+        hacerPregunta()
+    }
+    window.addEventListener("load", hacerPregunta, false); 
+</script>
+    
+</body>
+</html>

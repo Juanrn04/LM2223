@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h1>Calculador de indice de masa corporal</h1>
+    <input type="number" id="peso" placeholder="Peso" >
+    <br> <br>
+    <input type="number" id="altura" placeholder="Altura en metros"> 
+    <br><br>
+    <button onclick="calculo()"> Calcular </button>
+    <p id="num"></p>
+    <p id="demo"></p>
+    <script>
+        function validaEntrada()
+        {
+            let valida=true;
+            if (document.getElementById("peso").value=="" || document.getElementById("altura").value=="" || document.getElementById("altura").value<=0 || document.getElementById("peso").value<=0)
+            {
+            valida = false;
+            }
+            return valida;
+        }
+        function calculo()
+        {
+        if (validaEntrada()){
+        let peso = parseFloat(document.getElementById("peso").value);
+        let altura = parseFloat(document.getElementById("altura").value);
+        let calculo = (peso/(altura*altura)).toFixed(3);
+            if (calculo < 20){
+            document.getElementById("num").innerHTML= calculo;
+            document.getElementById("demo").innerHTML = "Peso inferior a lo normal";
+            }
+            else if (calculo >= 20 && calculo < 24)
+            {
+                document.getElementById("num").innerHTML= calculo;
+                document.getElementById("demo").innerHTML = "Peso Normal";
+            }
+            else if (calculo >= 24 && calculo < 29)
+            {
+                document.getElementById("num").innerHTML= calculo;
+                document.getElementById("demo").innerHTML = "Peso superior a lo normal";
+            }
+            else
+            {
+                document.getElementById("num").innerHTML= calculo;
+                document.getElementById("demo").innerHTML  = "Obesidad";
+            }  
+            }
+            else
+            {
+            document.getElementById("demo").innerHTML ="Debes escribir números o números validos";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

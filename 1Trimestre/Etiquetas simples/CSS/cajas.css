@@ -1,0 +1,12 @@
+#deslizar{
+    position: fixed;
+    top: 10px;
+    background-color: #d9d9d9 ;
+    height: 15px;
+    }
+#caja1{
+
+    position: relative;
+    top: 80px ;
+    z-index: -1 ;
+}

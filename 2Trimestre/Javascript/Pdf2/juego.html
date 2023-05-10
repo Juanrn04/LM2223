@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+</head>
+<body>
+    <p>Adivina el videojuego...</p>
+    <p> Escoge una de los siguientes videojuegos para ver si aciertas </p>
+    <p id="Texto" ></p>
+    <input type="text" id="palabra">
+    <button onclick="comprueba()" > Comprobar </button>
+    <script>
+        var palabras=["God-of-War", "Uncharted", "Spider-Man", "Pacman","Sonic"];
+        document.getElementById("Texto").innerHTML = palabras;
+        
+        var secreta = palabras[Math.floor(Math.random() * palabras.length)];
+        function comprueba(){
+            if (document.getElementById("palabra").value==secreta)
+            {
+                alert("¡Enhorabuena has acertado!");
+            }
+            else
+            {
+                alert("Lo siento, ¡Vuelve a intentarlo!");
+            }
+        }
+    </script>
+    
+</body>
+</html>

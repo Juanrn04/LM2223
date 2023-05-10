@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        //Esto sirve para que jquery espere a que se cargue todo el documento//
+        $(document).ready(function(){
+            $("#boton1").click(function(){
+                $imgsrc = $("img").attr("src")
+                alert($imgsrc);
+            });
+
+            $("#boton2").click(function(){
+                alert("HTML: " + $("#encabezado").html());
+            });
+
+            $("#boton3").click(function(){
+                alert("HTML: " + $("#parrafo2").html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 id="encabezado">Mi primer jquery</h1>
+    <img id="Imagen" href="https://www.nationalgeographic.com.es/naturaleza/mejores-fotografias-naturaleza-2021-segun-revista-nature_17700" src="Imagenes/OIP.jpg" alt="hola">
+    <p id="parrafo1">Hola que tal 1</p>
+    <p id="parrafo2">Hola que tal 2</p>
+    <p>Hola que tal 3</p>
+    <p>Hola que tal 4</p>
+    <button id="boton1">Obtener scr de la imagen</button>
+    <button id="boton2">Obtener html del encabezado</button>
+    <button id="boton3">Obtener html de un párrafo</button>
+ 
+    
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el numero</title>
+</head>
+<body>
+    <h1>¡Adivina el numero!</h1>
+
+    <input type="number" id="numero" placeholder="Introduzca un numero">
+    <p id="resultado"></p>
+    <p id="mensaje"></p>
+    <button onclick="otronum()">Sacar número a adivinar o intentar otro</button> <br><br>
+    <button onclick="calculo()">Comprobar</button>
+    
+
+    <script>
+        function otronum(){
+        numazar = Math.floor(Math.random() * 999);
+        document.getElementById("resultado").innerHTML= numazar;
+        }
+
+        function calculo(){
+            if(document.getElementById("numero").value==numazar)
+            {
+                document.getElementById("mensaje").innerHTML="¡Has acertado!"
+            }
+            else
+            {
+                document.getElementById("mensaje").innerHTML="Vaya... ¡Sigue intentandolo!"
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>

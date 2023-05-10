@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+</head>
+<body>
+        <h1>Habitaciones necesarias</h1>
+        <input type="number" id="adultos" placeholder="Numero adultos"> <br><br>
+        <input type="number" id="niños" placeholder="Numero niños"> <br><br>
+        <button onclick="calculo()">Calcular habitaciones</button>
+        <p id="demo"></p>
+        
+        <script>
+            function calculo(){
+            var numadultos = document.getElementById("adultos").value;
+            var numniños = document.getElementById("niños").value;
+                if (numadultos=="1" || numadultos =="2")
+                {
+                    document.getElementById("demo").innerHTML = "Habitaciones dobles";
+                   
+                }
+                    else if (numadultos =="3")
+                    {
+                        document.getElementById("demo").innerHTML = "Habitaciones triples";
+                    }
+                if (numadultos=="2" && numniños=="1")
+                {
+                    document.getElementById("demo").innerHTML = "Habitaciones dobles con supletorias";
+                
+                }
+                    else if (numniños=="2")
+                    {                    
+                        document.getElementById("demo").innerHTML = "Habitaciones Familiares";
+                    }
+                
+            }
+        </script>
+
+        
+    
+</body>
+</html>

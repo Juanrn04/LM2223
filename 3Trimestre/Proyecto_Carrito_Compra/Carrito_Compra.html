@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Carrito compra</title> </head>
+    <link rel="stylesheet" href="Carrito_Compra.css">
+  <body>
+    <!-- Encabezado -->
+    <div class="header">
+        <h2><img src="Imagenes/headerlogo.png" alt="headerlogo" height="100px"></h2>
+    </div> 
+
+    <!-- Barra lateral -->
+    <div class="sidebar">
+      <div class="nav">
+        <a href="#" id="href"><img src="imagenes/carrito.png" alt="Logo carrito" class="carrito" height="75px"></a>
+        <p id="numpc"></p>
+        <p id="numteclado"></p>
+        <p id="numraton"></p>
+        <p id="numaltavoz"></p>
+        <p id="total"></p>
+        <div class="btn-pagar">
+          <button class="pagar"><a href="Formulario_Carrito.html" target="_blank" class="a-pagar">PAGAR</a></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección principal -->
+    <div class="section">
+      <div id="fotos_total" class="fotos">
+        <div class="info">
+          <div id="ocultar1" class="pc-info">
+            <h2>PC</h2>
+            <p>Entra en la nueva generación de procesadores AMD Ryzen 5 con el nuevo PCCOM Silver. 
+              Su procesador AMD Ryzen 5 3600 de seis núcleos, 16 GB de RAM DDR4 y su potente tarjeta gráfica GTX 1660 Super 
+              te ofrecerán toda la potencia necesaria para disfrutar de los últimos juegos del mercado.</p>
+            <p>799,99 €</p>
+            <button onclick="infopc()">Info</button>
+          </div>
+          <div></div>
+          <div id="ocultar2" class="teclado-info">
+            <h2>Teclado</h2>
+            <p>Compra el teclado gaming GAME KX322, con una excelente retroiluminación RGB Rainbow,
+               88 teclas de membrana y 12 teclas especiales con funciones multimedia adicionales.
+              Disfruta de una increíble iluminación RGB Rainbow, dándole un toque colorido a tu setup, 
+              potenciando su estética a tu gusto. Hazte con este teclado compacto de tamaño reducido y aprovecha todas sus posibilidades.
+              </p>
+            <p>39,99 €</p>
+            <button onclick="infoteclado()">Info</button>
+          </div>
+          <div></div>
+          <div id="ocultar3" class="raton-info">
+            <h2>Ratón</h2>
+            <p>Presentando este mouse Vendetta de Forgeon puedo decirte que te encuentras ante el ratón más competente del mercado.
+               Este mouse ha sido por varios años consecutivos elegido el mejor mouse gaming en cuanto a su diseño. 
+               Dispone de diferentes botones que te generan todos los atajos y prestaciones que necesites al alcance de tu mano
+               y lleva también un sensor que regula la velocidad que quieras en cada momento. Con el mouse Vendetta lo ganarás todo. </p>
+            <p>19,99 €</p>
+            <button onclick="inforaton()">Info</button>
+          </div>
+          <div></div>
+          <div id="ocultar4" class="altavoz-info">
+            <h2>Altavoces</h2>
+            <p>Presentamos los nuevos Speakers M20 RGB Master, unos altavoces con un diseño y acabados espectaculares. 
+              Su potencia junto a la calidad de su material de ABS de alta ingeniería, 
+              te proporcionará claramente la experiencia de unos altavoces de ensueño ¡Siente totalmente como su sonido te envuelve totalmente!</p>
+            <p>59,99 €</p>
+            <button onclick="infoaltavoz()">Info</button>
+          </div>
+        </div>
+        <div class="pcdiv">
+          <div id="pc_a"></div>
+          <button onclick="sumar1()">+</button>
+          <button onclick="infopc()">Info</button>
+          <button onclick="restar1()">-</button>
+          <p id="contordenador"></p>
+        </div>
+        <div class="tecladodiv">
+          <div id="teclado_a"></div>
+          <button onclick="sumar2()">+</button>
+          <button onclick="infoteclado()">Info</button>
+          <button onclick="restar2()">-</button>
+          <p id="conteclado"></p>
+        </div>
+        <div id="divraton" class="ratonesdiv">
+          <div id="ratones_a"></div>
+          <button onclick="sumar3()">+</button>
+          <button onclick="inforaton()">Info</button>
+          <button onclick="restar3()">-</button>
+          <p id="contraton"></p>
+        </div>
+        <div class="altavocesdiv">
+          <div id="altavoces_a"></div>
+          <button onclick="sumar4()">+</button>
+          <button onclick="infoaltavoz()">Info</button>
+          <button onclick="restar4()">-</button>
+          <p id="contaltavoz"></p>
+        </div>
+      </div>
+  </div>
+
+  <script src="Carrito_Compra.js"></script>
+  </body>
+</html>

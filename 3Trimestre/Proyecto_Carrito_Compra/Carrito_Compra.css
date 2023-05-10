@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo general */
+.header, .nav, .section, .footer {
+  padding: 20px;
+  margin: 20;
+  border: solid 2px white;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: "Century Gothic", Helvetica, arial sans-serif;
+  background-color: white;
+  max-height: 100vh;
+  font-size: 1.1em;
+}
+
+/* Encabezado */
+.header {
+	background-color:#86aae4;	
+  text-align: center;
+}
+
+/* Barra lateral */
+.nav {
+  height: 1065px;
+  float: left;
+  top: 0;
+  left: 0;
+	background-color:rgb(134, 175, 250);	
+  overflow-x: hidden;
+  width: 15em;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: bold;
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  color: black;
+}
+
+.nav a:hover {
+  cursor: grab;
+}
+
+.carrito {
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Sección principal */
+.section {
+  height: 100vh;
+  max-width: 100%;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  margin-left: 265px;
+}
+
+/* Imagenes */
+.fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5em;
+  margin: 30px 30px 30px 30px;
+}
+
+.fotos div{
+  padding: 1em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Imagenes centradas */
+#pc_a, #teclado_a, #ratones_a, #altavoces_a {
+  justify-content: center;
+  display: flex;
+  width: 300px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+/* Tamaño div exterior */
+.pcdiv, .tecladodiv, .ratonesdiv, .altavocesdiv {
+  width: 415px;
+  height: 450px;
+  background-color:rgb(134, 175, 250);	
+}
+
+/* Estética div */
+.pcdiv:hover {
+  border: solid 3px black;
+} 
+.tecladodiv:hover {
+  border: solid 3px black;
+} 
+.ratonesdiv:hover {
+  border: solid 3px black;
+} 
+.altavocesdiv:hover {
+  border: solid 3px black;
+}
+
+/* Botón */
+button {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  width: 60px;
+  height: 30px;
+  border: white;
+  font-size: 25px;
+  cursor: grab;
+}
+
+/* Botón pagar */
+.pagar {
+  background-color: white;
+  width: 90px;
+  height: 40px;
+  font-size: 20px;
+  border: 0px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+
+.a-pagar {
+  margin-top: 8px;
+}
+
+/* cajas descripción */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 4.5em;
+  column-gap: 9.5em;
+  margin: -17px;
+  position: absolute;
+}
+
+.info div {
+  padding: 1em;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.pc-info, .teclado-info, .raton-info, .altavoz-info {
+  display: none;
+  background-color: black;
+  width: 425px;
+  height: 455px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.raton-info, .altavoz-info {
+  margin-top: 420px;
+}
+
+.altavoz-info, .teclado-info {
+  margin-left: -36px;
+}

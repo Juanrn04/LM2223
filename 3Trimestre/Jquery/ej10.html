@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        //Esto sirve para que jquery espere a que se cargue todo el documento//
+        $(document).ready(function(){
+            $("#boton1").click(function(){
+                $("input").val("Hola");
+        });
+    });
+
+
+    </script>
+</head>
+<body>
+    <h1>Campo tipo input</h1>
+    <input type="text"> <br><br>
+    <button id="boton1">Colocar valor</button>
+    
+</body>
+</html>

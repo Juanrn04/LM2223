@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        //Esto sirve para que jquery espere a que se cargue todo el documento//
+        $(document).ready(function(){
+            $("#boton1").click(function(){
+            let encabezados = $("h1,h2")
+            let imagenes = $("img");
+            let parrafos = $("p");
+            alert ("Hay " + parrafos.length + " párrafos en la página " + "," + imagenes.length + " imagenes y " + encabezados.length + " encabezados");
+
+        
+
+
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Mi primer jquery</h1>
+    <h2>Mi primer jquery</h2>
+    <img src="Imagenes/OIP.jpg" alt="hola">
+    <p>Hola que tal 1</p>
+    <p>Hola que tal 2</p>
+    <p>Hola que tal 3</p>
+    <p>Hola que tal 4</p>
+    <p>Hola que tal 5</p>
+    <p>Hola que tal 6</p>
+    <p>Hola que tal 7</p>
+    <p>Hola que tal 8</p>
+    <p>Hola que tal 9</p>
+    <p>Hola que tal 10</p>
+    <button id="boton1">Contar elementos de la pagina</button>
+    
+    
+</body>
+</html>

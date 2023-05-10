@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego_Dedos</title>
+</head>
+<body>
+    <h1>¿Cuantos dedos tengo?</h1>
+    <img src="dedo.png" alt="Imagen dedo" height="400px">
+    <p id="prueba"></p>
+    <input type="number" id="numero" placeholder="Número"> <br><br>
+    <button onclick="record()">Borrar record</button>
+    <button onclick="calculo()">Comprobar</button>
+    <button onclick="nuevonum()">Cambiar número</button>
+
+    <script> 
+    numazar = Math.floor(Math.random() * 6);
+    document.getElementById("prueba").innerHTML="He pensado en un número aleatorio "+numazar;
+    function calculo()
+    {
+        var contador;
+        if(document.getElementById("numero").value==numazar)
+            {
+                document.getElementById("prueba").innerHTML="¡Has acertado!, lo has hecho en "+contador+ " intentos";
+            }
+            else
+            {
+                document.getElementById("prueba").innerHTML="Vaya... ¡Sigue intentandolo!"
+                contar();
+                
+            }
+
+            function contar()
+            {
+                contador = contador + 1;
+            }
+
+    }
+    function nuevonum()
+    {
+        numazar = Math.floor(Math.random() * 6);
+        document.getElementById("prueba").innerHTML="He pensado en un número aleatorio "+numazar;
+    }
+
+    </script>
+    
+</body>
+</html>

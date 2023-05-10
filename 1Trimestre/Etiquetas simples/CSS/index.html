@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu lateral</title>
+</head>
+<style>
+body{
+background-color: aqua;
+}
+
+#texto {margin-left: 4px;}
+
+#lista {
+  margin: 0;
+  padding: 0;
+}
+
+#barralateral {
+  float: none;
+  width: auto;
+}
+
+.menu {
+  background: purple ;
+  height: 20px ;
+ 
+  border-radius: 4px;
+  list-style-type: none;
+  margin: 4px;
+  padding: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  #barralateral {width: 200px; float: right;}
+  #main {margin-right: 216px;}
+}
+
+@media print{
+
+  .menu{
+    display: none;
+  }
+  #menu{
+    display: none;
+  }
+  #barralateral{
+    display: none;
+  }
+}
+</style>
+
+<body>
+
+<div id="barralateral">
+  <ul id="lista">
+    <li class="menu">W3SCHOOL</li>
+    <li class="menu">APRENDE HTML</li>
+    <li class="menu">APRENDE CSS</li>
+    <li class="menu">REFERENCIA MOZILLA</li>
+    <li class="menu">TRUCOS CSS</li>
+    </ul>
+  </div>
+  
+  <div id="texto">
+    <h1>Aprende HTML y CSS</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+  </div>
+</div>
+    
+</body>
+</html>

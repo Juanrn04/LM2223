@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script src="formulario.js" ></script>
+</head>
+<body>
+    <h1>Registro usuario</h1>
+    <label>Nombre: <input type="text" id="nombre" placeholder="Nombre"></label><label id="valnombre" style="color: red;"></label><br><br>
+    <label>Email: <input type="text" id="email" placeholder="Email"></label> <label id="valemail" style="color: red;"></label> <br><br>
+    <label>Repetir Email: <input type="text" id="email2" placeholder="Repita su Email"></label> <label id="valemail2" style="color: red;"></label><br><br>
+    <button onclick="validacion()">Registrarse</button>
+    <p id="resultado"></p>
+</body>
+</html>

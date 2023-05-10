@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDACION</title>
+</head>
+<body>
+    <H1>CREA TU PERFIL</H1>
+
+    <input type="text" name="name" id="nombre" placeholder="Nombre"> <p id="vnombre"></p>
+    <input type="text" name="surname" id="apellido" placeholder="Apellido"> <p id="vapellido" ></p>
+    <input type="email" name="mail" id="email" placeholder="Email"><p id="vemail"></p>
+    <input type="text" name="direccion" id="direccion" placeholder="Dirección"><p id="vdireccion"></p>
+    <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad"> <p id="vciudad"></p>
+    <input type="tel" name="tel" id="tf" placeholder="Teléfono"> <p id="vtf"></p>
+    <input type="text" name="dni" id="dni" placeholder="DNi"> <p id="vdni"></p>
+    <input type="password" name="pass" id="contra" placeholder="PIN"> <p id="vcontra"></p>
+    <input type="password" name="pass2" id="contra2" placeholder="Repita su PIN"> <p id="vcontra2"></p>
+    <button onclick="validar()">CREA TU PERFIL</button>
+
+
+    <script>
+
+
+          
+
+            
+
+        function validar(){
+
+            var nombre=document.getElementById('nombre').value;
+            var apellido=document.getElementById('apellido').value;
+            var email=document.getElementById('email').value;
+            var direccion=document.getElementById('direccion').value;
+            var ciudad=document.getElementById('ciudad').value;
+            var tel=document.getElementById('tf').value;
+            var dni=document.getElementById('dni').value;
+            var pass=document.getElementById('contra').value;
+            var pass2=document.getElementById('contra2').value;
+            var nomOK=0;
+            var apellOK=0;
+            var dniOK=0;
+            var passOK=0;
+            var correoOK=0;
+            var pass2OK=0;
+
+            document.getElementById('vnombre').innerHTML='';
+            document.getElementById('vapellido').innerHTML='';
+            document.getElementById('vdireccion').innerHTML='';
+            document.getElementById('vciudad').innerHTML='';
+            document.getElementById('vtf').innerHTML='';
+            document.getElementById('vdni').innerHTML='';
+            document.getElementById('vcontra').innerHTML='';
+            document.getElementById('vcontra2').innerHTML='';
+
+
+         function perfil(){
+            if(nomOK==1 && apellOK==1 && dniOK==1 &&  correoOK==1 && passOK==1 && pass2OK==1){
+            let Usuario = nombre[0]+nombre[1]+apellido[0]+apellido[1]+tel[tel.length-3]+tel[tel.length-2]+tel[tel.length-1];
+                    alert('Su usuario es '+Usuario);
+            }
+         }
+
+         function valEmail(valor){
+            if (/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(valor))
+    {   
+        
+        document.getElementById('vemail').innerHTML="";
+        correoOK=1;
+      
+    } 
+    else 
+    {
+        correoOK=0;
+        
+        document.getElementById('vemail').innerHTML="Formato de correo erróneo"
+    }
+         }
+
+
+            
+
+            if(nombre==""){
+                document.getElementById('vnombre').innerHTML='Debe introducir un nombre';
+            }
+            else{
+                document.getElementById('vnombre').innerHTML='';
+                
+                nomOK=1;
+            }
+            
+
+           
+
+           if(apellido==""){
+                    document.getElementById('vapellido').innerHTML='Debe introducir un apellido';
+
+            }
+
+            else{
+                document.getElementById('vapellido').innerHTML='';
+                apellOK=1;
+
+            }
+          
+            if(email==""){
+                document.getElementById('vemail').innerHTML='Debe introducir un email';
+            }
+            else{
+                valEmail(email);
+
+            }  
+                   
+            if(dni==""){
+                document.getElementById('vdni').innerHTML='Debe introducir un DNI';
+            }
+                else{
+                    if(dni.length!=9 ){
+                        document.getElementById('vdni').innerHTML='Longitud del DNI incorrecta'
+                    }
+                    else{
+                        let opciones = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+                        let num = parseInt(dni[0]+ dni[1]+ dni[2]+ dni[3]+ dni[4]+ dni[5]+ dni[6]+ dni[7]);
+                        let letra=num%23;
+                        if(dni[8]!=opciones[letra]){
+                            document.getElementById('vdni').innerHTML='DNI incorrecto';
+                        }
+
+                        else{
+                        document.getElementById('vdni').innerHTML='';
+                        dniOK=1;
+
+                        }
+                    }
+                    
+                }
+                            
+            if(document.getElementById('contra').value==""){
+                document.getElementById('vcontra').innerHTML='Debe introducir una contraseña';
+            }
+            else{
+                if(document.getElementById('contra').value.length<8){
+                    document.getElementById('vcontra').innerHTML='Su contraseña debe contener mínimo 8 caracteres de largo'
+                }
+                else{
+                document.getElementById('vcontra').innerHTML='';
+                passOK=1;
+
+                }
+                                    
+            }
+            if(document.getElementById('contra2').value==""){
+                document.getElementById('vcontra2').innerHTML='Debe introducir otra vez su contraseña';
+            }
+            else{
+                if(pass2!=pass){
+                    document.getElementById('vcontra2').innerHTML='Su contraseña no coincide';
+                }
+                else{
+                document.getElementById('vcontra2').innerHTML='';
+                pass2OK=1;
+                
+
+            }
+                                                
+               
+                                        
+            }
+            
+            perfil();
+         }
+
+
+                   
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario-Examen</title>
+</head>
+<body>
+    <h1>Formnulario examen</h1>
+
+    <p>Nombre: <input type="text" id="nombre" placeholder="Nombre" > <p id="vnombre"></p>
+    <p>Apellido: <input type="text" id="apellido" placeholder="Apellido"> <p id="vapellido" ></p>
+    <p>Correo electronico: <input type="email" id="email" placeholder="Email"><p id="vemail"></p>
+    <p>PIN: <input type="password" id="contra" placeholder="PIN"> <p id="vcontra"></p>
+    <p>Comprobar PIN: <input type="password" id="contra2" placeholder="Repita su PIN"> <p id="vcontra2"></p>
+    <p><input id="cajita" type="checkbox">Acepto las condiciones de uso</p> <p id="vcaja"></p>
+    <button onclick="validar()">Verificar</button>
+
+
+    <script>
+        function validar(){
+
+            var nombre=document.getElementById('nombre').value;
+            var apellido=document.getElementById('apellido').value;
+            var email=document.getElementById('email').value;
+            var pass=document.getElementById('contra').value;
+            var pass2=document.getElementById('contra2').value;
+
+            document.getElementById('vnombre').innerHTML='';
+            document.getElementById('vapellido').innerHTML='';
+            document.getElementById('vemail').innerHTML='';
+            document.getElementById('vcontra').innerHTML='';
+            document.getElementById('vcontra2').innerHTML='';
+
+
+        
+
+         function valEmail(valor){
+            if (/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(valor))
+    {   
+        
+        document.getElementById('vemail').innerHTML="";
+      
+    } 
+    else 
+    { 
+        document.getElementById('vemail').innerHTML.style.color="Formato de correo erróneo"
+    }
+         }
+
+
+            
+
+            if(nombre==""){
+                document.getElementById('vnombre').innerHTML='Debe introducir un nombre';
+            }
+            else{
+                document.getElementById('vnombre').innerHTML='';
+
+            }
+            
+
+           
+
+           if(apellido==""){
+                    document.getElementById('vapellido').innerHTML='Debe introducir un apellido';
+
+            }
+
+            else{
+                document.getElementById('vapellido').innerHTML='';
+
+
+            }
+          
+            if(email==""){
+                document.getElementById('vemail').innerHTML='Debe introducir un email';
+            }
+            else{
+                valEmail(email);
+
+            }  
+                            
+            if(document.getElementById('contra').value==""){
+                document.getElementById('vcontra').innerHTML='Debe introducir una contraseña';
+            }
+            else{
+                if(document.getElementById('contra').value.length<8){
+                    document.getElementById('vcontra').innerHTML='Su contraseña debe contener mínimo 8 caracteres de largo'
+                }
+                else{
+                document.getElementById('vcontra').innerHTML='';
+
+                }
+                                    
+            }
+            if(document.getElementById('contra2').value==""){
+                document.getElementById('vcontra2').innerHTML='Debe introducir otra vez su contraseña';
+            }
+            else{
+                if(pass2!=pass){
+                    document.getElementById('vcontra2').innerHTML='Su contraseña no coincide';
+                }
+                else{
+                document.getElementById('vcontra2').innerHTML='';
+            }                       
+            }
+            if (document.getElementById('cajita').value=="")
+            {
+                document.getElementById('vcaja').innerHTML='Debe aceptar las condiciones de uso'
+            }
+            
+         }
+
+
+                   
+    </script>
+</body>
+</html>

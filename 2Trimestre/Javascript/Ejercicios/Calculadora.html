@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" id="numero1" placeholder="Numero 1" >
+    <br> <br>
+    <input type="number" id="numero2" placeholder="Numero 2"> 
+    <br><br>
+    <button onclick="sumaNumeros()"> + </button>
+    <button onclick="restaNumeros()"> - </button>
+    <button onclick="multNumeros()"> * </button>
+    <button onclick="divisionNumeros()"> / </button>
+    <p id="demo" ></p>
+    <script>
+        function validaEntrada(){
+            let valida=true;
+            if (document.getElementById("numero1").value=="" || document.getElementById("numero2").value=="")
+            {
+            valida = false;
+            }
+            return valida;
+        }
+        function sumaNumeros(){
+        if (validaEntrada()){
+        let numero1 = parseFloat(document.getElementById("numero1").value);
+        let numero2 = parseFloat(document.getElementById("numero2").value);
+        document.getElementById("demo").innerHTML = (numero1+numero2)
+        }
+        else{
+            document.getElementById("demo").innerHTML ="Debes escribir números"
+            }
+        }
+        function restaNumeros(){
+        if (validaEntrada()){
+        let numero1 = document.getElementById("numero1").value;
+        let numero2 = document.getElementById("numero2").value;
+        document.getElementById("demo").innerHTML = (numero1-numero2)
+
+        }
+        else{
+            document.getElementById("demo").innerHTML ="Debes escribir números"
+            }
+
+        }
+        function multNumeros(){
+        if (validaEntrada()){
+        let numero1 = document.getElementById("numero1").value;
+        let numero2 = document.getElementById("numero2").value;
+        document.getElementById("demo").innerHTML = (numero1*numero2)
+        }
+        else{
+            document.getElementById("demo").innerHTML ="Debes escribir números"
+            }
+        }
+        function divisionNumeros(){
+        if (validaEntrada()){
+        let numero1 = document.getElementById("numero1").value;
+        let numero2 = document.getElementById("numero2").value;
+        document.getElementById("demo").innerHTML = (numero1/numero2)
+        }
+        else{
+            document.getElementById("demo").innerHTML ="Debes escribir números"
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario para rellenar</h1>
+    <p> Nombre: <input type="text" id="nombre" placeholder="Nombre"></p> <p id="error-nombre"></p>
+    <p> Apellido: <input type="text" id="apellido" placeholder="Apellido"></p>
+    <p> Correo electronico : <input type="text" id="correo" placeholder="Correo"></p>
+    <p> Direccion: <input type="text" id="direccion" placeholder="Direccion"></p>
+    <p> Ciudad: <input type="text" id="ciudad" placeholder="Ciudad"></p>
+    <p> Telefono: <input type="number" id="telefono" placeholder="Telefono"></p>
+    <p> DNI: <input type="text" id="dni" placeholder="DNI"></p>
+    <p> PIN: <input type="number" id="pin" placeholder="PIN"></p>
+    <p> PIN repetido: <input type="number" id="pin_comprueba" placeholder="PIN REPETIDO"></p>
+    <button onclick="comprobar">Introducir datos</button>
+
+    <script>
+        function comprobar(){
+            if (document.getElementById("nombre").value=="")
+            {
+            document.getElementById("error-nombre").innerHTML ="Debes rellenar este campo";
+            }
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

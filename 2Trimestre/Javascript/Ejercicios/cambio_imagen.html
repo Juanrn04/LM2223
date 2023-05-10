@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide show</title>
+</head>
+<body>
+    <table border="0" cellpadding="0">
+        <h1>IES Isbilya</h1>
+     <tr>
+       <td width="100%"><img src="Imagenes/s0.jpg" id="fotoActual"></td>
+     </tr>
+     <tr>
+       <td width="100%">
+       <form>
+         <div align="center">
+             
+             
+             <input type="button" value="Atrás" onClick="atras()">
+             <input type="button" value="Siguiente" onClick="siguiente()">
+             <br>
+         
+           </div>
+       </form>
+       </td>
+     </tr>
+   </table>  
+    <script>
+    var fotos = ["Imagenes/s0.jpg","Imagenes/s1.jpg","Imagenes/s2.jpg","Imagenes/s3.jpg","Imagenes/s4.jpg"];
+    var variable = 0;
+    var totalfotos;
+
+function siguiente() {
+    totalfotos = fotos.length;
+    if (variable == totalfotos - 1) {
+        variable = 0
+    } else {
+        variable = variable + 1
+    }
+    document.getElementById("fotoActual").src = "Imagenes/s" + variable + ".jpg"
+}
+function atras() {
+    if (variable > 0) {
+        variable = variable - 1
+    } else {
+        variable = fotos.length - 1
+    }
+    document.getElementById("fotoActual").src = "Imagenes/s" + variable + ".jpg"
+}
+</script>
+    
+</body>
+</html>
