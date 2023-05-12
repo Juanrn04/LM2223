@@ -15,7 +15,7 @@ $(document).ready(function () {
                 $('#resultado').html('<p>No se pudo encontrar el gif desado</p>');
             },
             error: function () {
-                 $('#resultado').html('<p>No se pudo obtener el gif desado</p>');
+                $('#resultado').html('<p>No se pudo obtener el gif desado</p>');
             },
         });
     });
