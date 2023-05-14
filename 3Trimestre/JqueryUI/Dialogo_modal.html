@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dialogo modal</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#confirmacion_dialogo" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Eliminar todo": function() {
+          $( this ).dialog( "Cerrar" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "Cerrar" );
+        }
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="confirmacion_dialogo" title="Vaciar papelera?">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Seguro que quiere borrar todo?</p>
+</div>
+ 
+<p>Pelicula:  <a href="http://example.com">Enlace</a>Batman es un personaje de cómic creado por los estadounidenses Bob Kane y Bill Finger y propiedad de DC Comics. Apareció por primera vez en la historia titulada «El caso del sindicato químico» de la revista Detective Comics N.º 27, lanzada por la editorial National Publications el 30 de marzo de 1939</p>
+ 
+ 
+</body>
+</html>
