@@ -72,7 +72,7 @@
     <script>
         $(document).ready(function () {
     $('#buscar').click(function () {
-        let titulo = $('#titulo').val();
+        let libro = $('codlibro').val();
         let apiKey = 'ea9d7e84'; // Reemplaza esto con tu propia API key
 
         // Llamada AJAX utilizando jQuery
@@ -81,7 +81,12 @@
             success: function (data) {
                 if (data.Response === "True") {
                     console.log(data);
-                    $('#resultado').html(`<h2>${data.Title} (${data.Year})</h2><img src="${data.Poster}" alt="${data.Title}"><p>Director: ${data.Director}</p><p>Actores: ${data.Actors}</p><p>Resumen: ${data.Plot}</p>`);
+                    $('#resultado').html(`
+                    <p>Título: ${data.results.title} </p>
+                    <p>Autores: ${data.results.authors.name} </p>
+                    <img width="50" src="${data.image/jpeg}">
+                    <p>Descarga: ${data.download_count}</p>
+                    `);
                 } else {
                     $('#resultado').html('<p>No se encontró la película.</p>');
                 }
