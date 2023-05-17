@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tooltip-Formulario</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  label {
+    display: inline-block; width: 5em;
+  }
+  fieldset div {
+    margin-bottom: 2em;
+  }
+  fieldset .help {
+    display: inline-block;
+  }
+  .ui-tooltip {
+    width: 210px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var tooltips = $( "[title]" ).tooltip({
+      position: {
+        my: "left top",
+        at: "right+5 top-5",
+        collision: "none"
+      }
+    });
+    $( "<button>" )
+      .text( "Show help" )
+      .button()
+      .on( "click", function() {
+        tooltips.tooltip( "open" );
+      })
+      .insertAfter( "form" );
+  } );
+  </script>
+</head>
+<body>
+ 
+<form>
+  <fieldset>
+    <div>
+      <label for="firstname">Nombre</label>
+      <input id="firstname" name="firstname" title="Porfavor escriba su nombre.">
+    </div>
+    <div>
+      <label for="lastname">Apellido1</label>
+      <input id="lastname" name="lastname" title="Escriba su primer apellido.">
+    </div>
+    <div>
+        <label for="lastname">Apellido2</label>
+        <input id="lastname" name="lastname" title="Escriba su segundo apllido.">
+      </div>
+    <div>
+      <label for="address">Correo</label>
+      <input id="address" name="address" title="Introduzca su correo electronico.">
+    </div>
+    <div>
+        <label for="address">Dni</label>
+        <input id="address" name="address" title="Introduzca su DNI.">
+      </div>
+      <div>
+        <label for="address">Contraseña</label>
+        <input id="address" name="address" title="Introduzca su contraseña.">
+      </div>
+  </fieldset>
+</form>
+ 
+ 
+</body>
+</html>

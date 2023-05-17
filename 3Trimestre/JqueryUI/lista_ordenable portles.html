@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista ordenable Portlets</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  body {
+    min-width: 520px;
+  }
+  .column {
+    width: 170px;
+    float: left;
+    padding-bottom: 100px;
+  }
+  .portlet {
+    margin: 0 1em 1em 0;
+    padding: 0.3em;
+  }
+  .portlet-header {
+    padding: 0.2em 0.3em;
+    margin-bottom: 0.5em;
+    position: relative;
+  }
+  .portlet-toggle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -8px;
+  }
+  .portlet-content {
+    padding: 0.4em;
+  }
+  .portlet-placeholder {
+    border: 1px dotted black;
+    margin: 0 1em 1em 0;
+    height: 50px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".column" ).sortable({
+      connectWith: ".column",
+      handle: ".portlet-header",
+      cancel: ".portlet-toggle",
+      placeholder: "portlet-placeholder ui-corner-all"
+    });
+ 
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+ 
+    $( ".portlet-toggle" ).on( "click", function() {
+      var icon = $( this );
+      icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+      icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div class="column">
+ 
+  <div class="portlet">
+    <div class="portlet-header">Batman</div>
+    <div class="portlet-content">Batman es un personaje de cómic creado por los estadounidenses Bob Kane y Bill Finger y propiedad de DC Comics</div>
+  </div>
+ 
+  <div class="portlet">
+    <div class="portlet-header">Titanic</div>
+    <div class="portlet-content">El RMS Titanic fue un transatlántico británico, el mayor barco de pasajeros del mundo al finalizar su construcción</div>
+  </div>
+ 
+</div>
+ 
+<div class="column">
+ 
+  <div class="portlet">
+    <div class="portlet-header">Transformers</div>
+    <div class="portlet-content">Transformers es una franquicia de entretenimiento</div>
+  </div>
+ 
+</div>
+ 
+<div class="column">
+ 
+  <div class="portlet">
+    <div class="portlet-header">Jurassic Park</div>
+    <div class="portlet-content">Parque Jurásico (título original en inglés: Jurassic Park) es una película de ciencia ficción y aventuras</div>
+  </div>
+ 
+  <div class="portlet">
+    <div class="portlet-header">Star Wars</div>
+    <div class="portlet-content">Guerra intergalacticas junto a los jedy</div>
+  </div>
+ 
+</div>
+ 
+ 
+</body>
+</html>
