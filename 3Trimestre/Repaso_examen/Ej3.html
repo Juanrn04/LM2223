@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>API de Clima</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function () {
+    $('#mostrar').click(function () {
+        let apiKey = '48cVmdit8hj2sSYWc2QY_le5DmAc9r9ZAiX2GUkR5Qg'; // Reemplaza esto con tu propia API key
+
+        // Llamada AJAX utilizando jQuery
+        $.ajax({
+            url: "https://api.unsplash.com/photos/random?client_id=" + apiKey,
+            success: function (data) {
+                $('#resultado').html(`
+                <img width="300" src="${data.urls.small}">
+                `);
+            },
+            error: function () {
+                $('#resultado').html('<p>No se pudo obtener la imagen</p>');
+            },
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+    <button id="mostrar">Mostrar foto aleatoria</button>
+    <div id="resultado"></div>
+</body>
+</html>

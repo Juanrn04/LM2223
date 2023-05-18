@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Git-Hub</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+$(document).ready(function () {
+    $('#buscar').click(function () {
+        let usuario = $('#usuario').val();
+        // Reemplaza esto con tu propia API key
+
+        // Llamada AJAX utilizando jQuery
+        $.ajax({
+            url: "https://api.github.com/users/" + usuario,
+            success: function (data) {
+                $('#resultado').html(`
+                <h2>${data.login}, id:(${data.id})</h2> 
+                <img height="150px" src=${data.avatar_url} >
+                <p>${data.type}</p>
+                <p>${data.public_repos}</p>
+                `);
+            },
+            fail:function() {
+                $('#resultado').html('<p>No se encontro el usuario</p>');
+            },
+            error: function () {
+                $('#resultado').html('<p>Error al buscar usuario</p>');
+            },
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+    <input type="text" id="usuario" placeholder="Introduzca un usuario">
+    <button id="buscar">Buscar</button>
+    <div id="resultado"></div>
+</body>
+</html>
