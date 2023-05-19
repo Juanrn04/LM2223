@@ -7,25 +7,23 @@
     <script>
 $(document).ready(function () {
     $('#buscar').click(function () {
-        let titulo = $('#titulo').val();
-        let apikey = "AIzaSyBaaHWZ8qFOjM3frT9EEJx-RYz5B3xcAb8";
+        let foto = $('#foto').val();
+        let apikey = "208b0b3e0b3ca5b13bdaf68c455469ad";
         // Reemplaza esto con tu propia API key
 
         // Llamada AJAX utilizando jQuery
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=intitle:"+ titulo + "&key="+ apikey,
+            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=208b0b3e0b3ca5b13bdaf68c455469ad&text=" + foto + "&format=json&nojsoncallback=1",
             success: function (data) {
                 $('#resultado').html(`
-                <h2>Título: ${data.items[0].volumeInfo.title}</h2> 
-                <p>Autores: ${data.items[0].volumeInfo.authors}</p>
-                <p>Fecha de lanzamiento: ${data.items[0].volumeInfo.publishedDate}</p>
+                <img src="https://farm${data.photos.photo[0].farm}.staticflickr.com/${data.photos.photo[0].server}/${data.photos.photo[0].id}_${data.photos.photo[0].secret}.jpg" >
                 `);
             },
             fail:function() {
-                $('#resultado').html('<p>No se encontro el libro</p>');
+                $('#resultado').html('<p>No se la foto</p>');
             },
             error: function () {
-                $('#resultado').html('<p>Error al buscar el libro</p>');
+                $('#resultado').html('<p>Error al buscar la foto</p>');
             },
         });
     });
@@ -34,7 +32,7 @@ $(document).ready(function () {
     </script>
 </head>
 <body>
-    <input type="text" id="titulo" placeholder="Introduzca un libro">
+    <input type="text" id="foto" placeholder="Introduzca algo para buscar">
     <button id="buscar">Buscar</button>
     <div id="resultado"></div>
 </body>
