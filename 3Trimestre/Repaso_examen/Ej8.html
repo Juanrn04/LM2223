@@ -13,10 +13,10 @@ $(document).ready(function () {
 
         // Llamada AJAX utilizando jQuery
         $.ajax({
-            url: "https://api.giphy.com/v1/gifs/search?api_key="+apiKey+"&q="+foto,
+            url: "https://api.giphy.com/v1/gifs/search?api_key=fsCDTo96q10hGjfkkolLmvKVoRT2N0qo&q="+foto,
             success: function (data) {
                 $('#resultado').html(`
-                <img src="${data.data[0].images.originarl.url}" >
+                <img src="${data.data[0].images.original.url}" >
                 `);
             },
             fail:function() {
