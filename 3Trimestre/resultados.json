@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Phillip",
+                "last": "Terry"
+            },
+            "location": {
+                "street": {
+                    "number": 3550,
+                    "name": "Mill Road"
+                },
+                "city": "Canterbury",
+                "state": "East Sussex",
+                "country": "United Kingdom",
+                "postcode": "K1T 9RS",
+                "coordinates": {
+                    "latitude": "-4.5111",
+                    "longitude": "-95.6731"
+                },
+                "timezone": {
+                    "offset": "+9:00",
+                    "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+                }
+            },
+            "email": "phillip.terry@example.com",
+            "login": {
+                "uuid": "ced57250-c1e3-4e69-9d58-081a63513204",
+                "username": "goldenlion136",
+                "password": "stephan",
+                "salt": "Xe3l5yI2",
+                "md5": "1b8d392a706f3dfde3e11c483f15a100",
+                "sha1": "070b2751525000eb0c44dc31c4f05c51f38a4fca",
+                "sha256": "e0e03b342fd2ac8dea103c8fc9b33636f614bba9eea7288927998ed49fcc2d7f"
+            },
+            "dob": {
+                "date": "1976-07-09T04:23:31.043Z",
+                "age": 46
+            },
+            "registered": {
+                "date": "2004-04-22T02:43:41.610Z",
+                "age": 19
+            },
+            "phone": "015395 55127",
+            "cell": "07440 647461",
+            "id": {
+                "name": "NINO",
+                "value": "BL 13 06 14 C"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/65.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/65.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/65.jpg"
+            },
+            "nat": "GB"
+        }
+    ],
+    "info": {
+        "seed": "968a61431827f84d",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
