@@ -13,7 +13,7 @@ $(document).ready(function () {
 
         // Llamada AJAX utilizando jQuery
         $.ajax({
-            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=208b0b3e0b3ca5b13bdaf68c455469ad&text=" + foto + "&format=json&nojsoncallback=1",
+            url: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=208bb03e0b3ca5b13bdaf68c455469ad&text=" + foto + "&format=json&nojsoncallback=1",
             success: function (data) {
                 $('#resultado').html(`
                 <img src="https://farm${data.photos.photo[0].farm}.staticflickr.com/${data.photos.photo[0].server}/${data.photos.photo[0].id}_${data.photos.photo[0].secret}.jpg" >
