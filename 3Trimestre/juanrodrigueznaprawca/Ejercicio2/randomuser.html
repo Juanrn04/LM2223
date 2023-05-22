@@ -58,19 +58,19 @@
             success: function (data) {
                 console.log(data);
                 $("#circle").html(`
-                <img src="${data.results[0].picture[0].thumbnail}">
-                `);
+                <img src="${data.results[0].picture.thumbnail}">
+                `),
                 $("#fullname").html(`
-                <p> ${data.results.name.first} ${data.results.name.last}</p>
-                `);
+                <p> ${data.results[0].name.first} ${data.results[0].name.last}</p>
+                `),
                 $("#username").html(`
-                <p> ${data.results.login.username}</p>
-                `);
+                <p> ${data.results[0].login.username}</p>
+                `),
                 $("#email").html(`
-                <p> ${data.results.email}</p>
-                `);
+                <p> ${data.results[0].email}</p>
+                `),
                 $("#city").html(`
-                <p> ${data.results.location.city}</p>
+                <p> ${data.results[0].location.city}</p>
                 `);
                 },
                 fail:function() {
