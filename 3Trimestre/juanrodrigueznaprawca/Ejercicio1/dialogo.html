@@ -19,11 +19,11 @@
       buttons: {
         "Eliminar todos los archivos": function() {
           $( this ).dialog("close");
-        
+          $("ul").hide();
         },
         Cancelar: function() {
           $( this ).dialog( "close" );
-          $("ul").hide();
+          
         }
       }
       

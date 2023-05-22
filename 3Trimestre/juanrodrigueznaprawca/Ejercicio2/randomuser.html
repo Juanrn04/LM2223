@@ -58,7 +58,7 @@
             success: function (data) {
                 console.log(data);
                 $("#circle").html(`
-                <img src="${data.results.picture.thumbnail}">
+                <img src="${data.results[0].picture[0].thumbnail}">
                 `);
                 $("#fullname").html(`
                 <p> ${data.results.name.first} ${data.results.name.last}</p>
