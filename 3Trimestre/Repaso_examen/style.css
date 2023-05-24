@@ -1,0 +1,30 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+    
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid rgb(118, 118, 235);
+    box-shadow: 5px 5px #687ea9;
+    padding: 50px;
+}
+
+#resumen {
+    margin-top: 20px;
+}
+
+#qrcode {
+    margin-top: 20px;
+}
+.background-image {
+    background: url('background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 130vh;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+  }
+  
