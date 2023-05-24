@@ -34,7 +34,7 @@
             </div>
             <div id="card-body">
                 <div id="usuario">
-                    <img src="" id="circle">
+                    <p id="circle" ></p>
                     <p id="fullname"></p>
                     <p id="username"></p>
                     <p id="email"></p>
@@ -58,7 +58,7 @@
             success: function (data) {
                 console.log(data);
                 $("#circle").html(`
-                <img src="${data.results[0].picture.thumbnail}">
+                <img style="border-radius: 50px;" src="${data.results[0].picture.medium}">
                 `),
                 $("#fullname").html(`
                 <p> ${data.results[0].name.first} ${data.results[0].name.last}</p>
