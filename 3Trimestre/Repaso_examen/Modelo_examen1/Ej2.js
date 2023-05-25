@@ -35,24 +35,30 @@ $(document).ready(function () {
         });
     });
 
-    $("btn-todos").click(function(){
-        $.get("https://fakestoreapi.com/products").done(function (r) {
-            console.log(r);
-            let num_productos = r.length;
-            for (let i = 0; i < num_productos; i++) {
-                let titulo = r[i].title;
-                let precio = r[i].price;
-                let imagen = r[i].image;
-                let descripcion = r[i].description;                
-                $('#resultados').html(
-                    '<p>' + '<img width="120" src="' + imagen + '"></p>' +
-                    '<p>Título: ' + titulo + '</p>' +
-                    '<p>Descripción: ' + descripcion + '</p>' +
-                    '<p>Precio: ' + precio + '€</p>');
-            }
-        }).fail( function (){
-            $("#resultados").html("Error cargando datos del servidor");
-            }
-        );
-    })
+    $("#btn-todos").click(function () {
+        $.ajax({
+            url: "https://fakestoreapi.com/products/",
+            success: function (data) {
+                console.log(data);
+                let num_productos = data.length;
+                $("#resultados").empty();
+                for (let i = 0; i < num_productos; i++) {
+                $("#resultados").append(`
+                <p>${data[i].title} </p>
+                <img height="150px" src="${data[i].image}" >
+                <p>Precio: ${data[i].price}€<p>
+                <p>${data[i].description}</p>
+                `);
+                }
+            },
+            fail: function()
+            {
+                $("#resultados").html("<p>No se encontró el libro.</p>");
+            },
+            error: function()
+            {
+                $("#resultados").html("<p>Error al buscar el libro</p>");
+            },
+        });
+    });
 });
