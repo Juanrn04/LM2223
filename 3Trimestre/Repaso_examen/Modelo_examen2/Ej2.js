@@ -12,7 +12,7 @@ $(document).ready(function () {
                     for (let i = 0; i < num_productos; i++) {
                     $("#resultados").append(`
                     <p>${data.results[i].title}</p>
-                    <p>Autor: + ${data.results[i].authors.name} +</p> 
+                    <p>Autor: ${data.results[i].authors.name} </p> 
                     <img src="${data.results[i].formats['image/jpeg']}">
                     <p><a href="${data.results[i].formats["text/plain"]}" target="_blanck">Descargar aqui</a></p>
                     <p>Num de descargas: ${data.results[i].download_count}</p>

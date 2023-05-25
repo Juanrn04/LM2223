@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Dialog - Modal confirmation</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 600,
+      modal: true,
+      buttons: {
+        "Eliminar todos los archivos": function() {
+          $( this ).dialog( "close" );
+          $("ul").hide();
+        },
+        Cancelar: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="dialog-confirm" title="Vaciar papelera">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>Estos elementos seran eliminados y no podra eliminarlos ¿Esta seguro?</p>
+</div>
+
+<h1>Ficheros del sistema:</h1>
+<ul>
+    <li>Fichero 1</li>
+    <li>Fichero 2</li>
+    <li>Fichero 3</li>
+    <li>Fichero 4</li>
+    <li>Fichero 5</li>
+</ul>
+ 
+
+ 
+ 
+</body>
+</html>
