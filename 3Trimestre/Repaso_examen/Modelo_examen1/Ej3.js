@@ -1,4 +1,3 @@
-/* Ponemos los selectores de fecha en español */
 $.datepicker.regional['es'] = {
     closeText: 'Cerrar',
     prevText: '<Ant',
@@ -18,14 +17,16 @@ $.datepicker.regional['es'] = {
 };
 $.datepicker.setDefaults($.datepicker.regional['es']);
 $(document).ready(function () {
-$("#fecha").datepicker({ minDate: 1, maxDate: "+1W"});
 
-$("#reserva").click(function (e) { 
+$( "#fecha" ).datepicker({ minDate: +1, maxDate: +7 });
+  
+  $("#reserva").click(function (e) { 
     e.preventDefault();
     $("#totalPrecio").html("Precio: 0€");
     let hora = $("#hora").val();
     let luz = $("#luz").val();
     let total = 0;
+
     switch (hora)
     {
         case "1":
@@ -44,7 +45,7 @@ $("#reserva").click(function (e) {
             total = 16;
             break;
     }
-    
+
     $("#diaReserva").html("Reserva el "+$("#fecha").val() + " la pista " + $("#pista").val());
     if ($('#luz').is(':checked')){
         total += 4 ;
@@ -54,5 +55,6 @@ $("#reserva").click(function (e) {
     {
         $("#totalPrecio").html("Precio: " + total + "€ sin luz");
     }
-});
-});
+
+  });
+  });

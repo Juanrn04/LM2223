@@ -36,15 +36,14 @@ $(document).ready(function () {
     });
 
     $("btn-todos").click(function(){
-        $.get("https://fakestoreapi.com/products/").done(function (data) {
-            console.log(data);
-            let num_productos = data.length;
-            $("#resultados").empty();
+        $.get("https://fakestoreapi.com/products").done(function (r) {
+            console.log(r);
+            let num_productos = r.length;
             for (let i = 0; i < num_productos; i++) {
-                let titulo = data[i].title;
-                let precio = data[i].price;
-                let imagen = data[i].image;
-                let descripcion = data[i].description;                
+                let titulo = r[i].title;
+                let precio = r[i].price;
+                let imagen = r[i].image;
+                let descripcion = r[i].description;                
                 $('#resultados').html(
                     '<p>' + '<img width="120" src="' + imagen + '"></p>' +
                     '<p>Título: ' + titulo + '</p>' +
